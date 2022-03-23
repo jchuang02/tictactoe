@@ -1,0 +1,13 @@
+.space {
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hover {
+  &:hover {
+    cursor: pointer;
+    border: 2px solid black;
+  }
+}
