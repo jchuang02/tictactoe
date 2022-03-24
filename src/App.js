@@ -15,12 +15,8 @@ export default function App() {
     null,
     null,
   ]);
-  let [turn, setTurn] = useState(null);
+  let [turn, setTurn] = useState(1);
   let [winner, setWinner] = useState(null);
-
-  let onStart = () => {
-    setTurn(1);
-  };
 
   let onReset = () => {
     setGame([null, null, null, null, null, null, null, null, null]);
@@ -67,12 +63,15 @@ export default function App() {
   return (
     <div className="container">
       <h1>Tic Tac Toe</h1>
-      <Board game={game} setGame={setGame} turn={turn} setTurn={setTurn} />
+      <Board
+        game={game}
+        setGame={setGame}
+        turn={turn}
+        setTurn={setTurn}
+        winner={winner}
+      />
       <Players turn={turn} />
-      <button onClick={onStart} disabled={turn !== null}>
-        Start
-      </button>
-      <button onClick={onReset} disabled={turn === null}>
+      <button onClick={onReset} disabled={winner === null}>
         Play Again
       </button>
     </div>
