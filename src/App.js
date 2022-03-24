@@ -71,7 +71,11 @@ export default function App() {
         winner={winner}
       />
       <Players turn={turn} />
-      <button onClick={onReset} disabled={winner === null}>
+      <button
+        aria-roledescription="button"
+        onClick={onReset}
+        disabled={winner === null}
+      >
         Play Again
       </button>
     </div>

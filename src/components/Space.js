@@ -40,6 +40,7 @@ export default function Space({ id, game, setGame, turn, setTurn, winner }) {
 
   return (
     <div
+      role="gridcell"
       onClick={winner === null && turn && game[id] === null ? onClick : null}
       onMouseOver={
         winner === null && turn && game[id] === null ? onHoverIn : null

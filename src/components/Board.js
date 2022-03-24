@@ -24,6 +24,8 @@ let createBoard = (game, setGame, turn, setTurn, winner) => {
 //The tic tac toe board.
 export default function Board({ game, setGame, turn, setTurn, winner }) {
   return (
-    <div id="board">{createBoard(game, setGame, turn, setTurn, winner)}</div>
+    <div id="board" role="grid">
+      {createBoard(game, setGame, turn, setTurn, winner)}
+    </div>
   );
 }
